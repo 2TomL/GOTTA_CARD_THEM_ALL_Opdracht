@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.PriorityQueue;
 
 public class MainApp {
     public static void main(String[] args) {
@@ -64,8 +65,8 @@ public class MainApp {
     Friends fester = new Friends("Fester",false, 1, 2);
     Friends anna = new Friends("Anna",false, 8, 4);
 
-    PostCard yourPostCard = yourPostCardList.get(2);
-    PostCard friendPostCard = yourFriendsPostCardList.get(0);
+    PostCard yourPostCard = yourPostCardList.get(4);
+    PostCard friendPostCard = yourFriendsPostCardList.get(2);
     int yourPostCardIndex = yourPostCardList.indexOf(yourPostCard);
     int friendPostCardIndex = yourFriendsPostCardList.indexOf(friendPostCard);
         yourPostCardList.set(yourPostCardIndex, friendPostCard);
@@ -91,6 +92,22 @@ public class MainApp {
         System.out.println("\n");
         CardManager.removeDuplicates(yourPostCardList);
         CardManager.removeDuplicates(yourFriendsPostCardList);
+
+        PriorityQueue<Friends> sortedFriends = new PriorityQueue<>();
+
+        sortedFriends.offer(bobby);
+        sortedFriends.offer(melissa);
+        sortedFriends.offer(darla);
+        sortedFriends.offer(bert);
+        sortedFriends.offer(grandma);
+        sortedFriends.offer(fester);
+        sortedFriends.offer(anna);
+
+        sortedFriends.stream()
+                .sorted(Comparator.comparing(Friends::isFamily).reversed())
+                .sorted(Comparator.comparing(Friends::getFriendShipLevel).reversed())
+                .sorted(Comparator.comparing(Friends::getYearsKnown).reversed())
+                .forEach(System.out::println);
 
     }
 }
