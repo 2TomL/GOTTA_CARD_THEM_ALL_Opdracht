@@ -45,6 +45,7 @@ public class Friends {
         this.friendShipLevel = friendShipLevel;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

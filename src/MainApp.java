@@ -87,5 +87,10 @@ public class MainApp {
         for (PostCard postCard : yourFriendsPostCardList) {
             System.out.println(postCard);
         }
+
+        System.out.println("\n");
+        CardManager.removeDuplicates(yourPostCardList);
+        CardManager.removeDuplicates(yourFriendsPostCardList);
+
     }
 }
