@@ -28,8 +28,8 @@ public class PostCard {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        //if (o==null || getClass() !=o.getClass())return false;
-        //PostCard postCard = (PostCard) o;
+//if (o==null || getClass() !=o.getClass())return false;
+//PostCard postCard = (PostCard) o;
         if (!(o instanceof PostCard postCard)) return false;
 //        return Objects.equals(postCard.country) &&
 //                Objects.equals(postCard.continent);

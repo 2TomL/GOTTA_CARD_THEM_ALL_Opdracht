@@ -102,12 +102,13 @@ public class MainApp {
         sortedFriends.offer(grandma);
         sortedFriends.offer(fester);
         sortedFriends.offer(anna);
-
+        System.out.println("\n");
         sortedFriends.stream()
                 .sorted(Comparator.comparing(Friends::isFamily).reversed())
                 .sorted(Comparator.comparing(Friends::getFriendShipLevel).reversed())
                 .sorted(Comparator.comparing(Friends::getYearsKnown).reversed())
                 .forEach(System.out::println);
+
 
     }
 }

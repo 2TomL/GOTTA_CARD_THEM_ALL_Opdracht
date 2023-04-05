@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Friends {
+public class Friends implements Comparable {
     private String name;
     private boolean family;
     private int yearsKnown;
@@ -45,7 +45,6 @@ public class Friends {
         this.friendShipLevel = friendShipLevel;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -71,5 +70,10 @@ public class Friends {
                 ", yearsKnown=" + yearsKnown +
                 ", friendShipLevel=" + friendShipLevel +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
