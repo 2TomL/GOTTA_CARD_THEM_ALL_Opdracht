@@ -14,34 +14,42 @@ public class Friends implements Comparable {
     }
 
     public String getName() {
+        
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public boolean isFamily() {
+
         return family;
     }
 
     public void setFamily(boolean family) {
+
         this.family = family;
     }
 
     public int getYearsKnown() {
+
         return yearsKnown;
     }
 
     public void setYearsKnown(int yearsKnown) {
+
         this.yearsKnown = yearsKnown;
     }
 
     public int getFriendShipLevel() {
+
         return friendShipLevel;
     }
 
     public void setFriendShipLevel(int friendShipLevel) {
+
         this.friendShipLevel = friendShipLevel;
     }
 
@@ -76,4 +84,5 @@ public class Friends implements Comparable {
     public int compareTo(Object o) {
         return 0;
     }
+
 }

@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class MainApp {
     public static void main(String[] args) {
@@ -64,7 +62,7 @@ public class MainApp {
     Friends grandma = new Friends("Nana",true, 12, 7);
     Friends fester = new Friends("Fester",false, 1, 2);
     Friends anna = new Friends("Anna",false, 8, 4);
-
+//oef1
     PostCard yourPostCard = yourPostCardList.get(4);
     PostCard friendPostCard = yourFriendsPostCardList.get(2);
     int yourPostCardIndex = yourPostCardList.indexOf(yourPostCard);
@@ -79,7 +77,7 @@ public class MainApp {
         Comparator <PostCard> postCardComperator = Comparator.comparing(PostCard::getCountry);
         yourPostCardList.sort(postCardComperator);
         yourFriendsPostCardList.sort(postCardComperator);
-
+//oef2
         System.out.println("Postcards by country: ");
         for (PostCard postCard : yourPostCardList) {
             System.out.println(postCard);
@@ -88,11 +86,11 @@ public class MainApp {
         for (PostCard postCard : yourFriendsPostCardList) {
             System.out.println(postCard);
         }
-
+//oef 3
         System.out.println("\n");
         CardManager.removeDuplicates(yourPostCardList);
         CardManager.removeDuplicates(yourFriendsPostCardList);
-
+//oef4
         PriorityQueue<Friends> sortedFriends = new PriorityQueue<>();
 
         sortedFriends.offer(bobby);
@@ -108,7 +106,6 @@ public class MainApp {
                 .sorted(Comparator.comparing(Friends::getFriendShipLevel).reversed())
                 .sorted(Comparator.comparing(Friends::getYearsKnown).reversed())
                 .forEach(System.out::println);
-
 
     }
 }

@@ -10,18 +10,22 @@ public class PostCard {
     }
 
     public String getCountry() {
+
         return country;
     }
 
     public String getContinent() {
+
         return continent;
     }
 
     public void setCountry(String country) {
+
         this.country = country;
     }
 
     public void setContinent(String continent) {
+
         this.continent = continent;
     }
 
@@ -39,8 +43,10 @@ public class PostCard {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(country, continent);
     }
+
     @Override
     public String toString() {
         return "PostCard{" +
